@@ -1,0 +1,54 @@
+{
+    "name": "Graph Data Example",
+    "models": [
+        {
+            "name": "ExampleModel",
+            "generator": "random(edge_coverage(100) && vertex_coverage(100))",
+            "startElementId": "v0",
+            "actions": [
+                "number = 0;"
+            ],
+            "vertices": [
+                {
+                    "id": "v0",
+                    "name": "v_start"
+                },
+                {
+                    "id": "v1",
+                    "name": "v_A"
+                },
+                {
+                    "id": "v2",
+                    "name": "v_B"
+                }
+            ],
+            "edges": [
+                {
+                    "id": "e0",
+                    "name": "e_chose_A",
+                    "guard": "number > 0.5",
+                    "sourceVertexId": "v0",
+                    "targetVertexId": "v1"
+                },
+                {
+                    "id": "e1",
+                    "name": "e_chose_B",
+                    "sourceVertexId": "v0",
+                    "targetVertexId": "v2"
+                },
+                {
+                    "id": "e2",
+                    "name": "e_restart",
+                    "sourceVertexId": "v1",
+                    "targetVertexId": "v0"
+                },
+                {
+                    "id": "e3",
+                    "name": "e_restart",
+                    "sourceVertexId": "v2",
+                    "targetVertexId": "v0"
+                }
+            ]
+        }
+    ]
+}
