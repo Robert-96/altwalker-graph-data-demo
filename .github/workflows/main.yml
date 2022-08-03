@@ -18,6 +18,9 @@ jobs:
         java-version: 11
     - name: Setup AltWalker
       uses: Robert-96/altwalker-action@v2
+    - name: List pip packages
+      run: pip list
+      shell: bash
     - name: Check the models
       run: altwalker check -m models/default.json "random(vertex_coverage(100))"
       shell: bash
