@@ -20,9 +20,6 @@ jobs:
       uses: Robert-96/altwalker-action@v2
       with:
         altwalker-version: '0.3.1'
-    - name: List pip packages
-      run: pip list
-      shell: bash
     - name: Check the models
       run: altwalker check -m models/default.json "random(vertex_coverage(100))"
       shell: bash
