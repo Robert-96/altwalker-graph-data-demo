@@ -18,6 +18,8 @@ jobs:
         java-version: 11
     - name: Setup AltWalker
       uses: Robert-96/altwalker-action@v2
+      with:
+        altwalker-version: '0.3.1'
     - name: List pip packages
       run: pip list
       shell: bash
